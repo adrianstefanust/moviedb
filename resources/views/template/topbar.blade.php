@@ -66,9 +66,9 @@
                             <span data-key="t-apps">Movies</span> <div class="arrow-down"></div>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="topnav-pages">
-
-                            <a href="#" class="dropdown-item" data-key="t-calendar">Calendar</a>
-                            <a href="#" class="dropdown-item" data-key="t-chat">Chat</a>
+                            @foreach ($category as $item)
+                            <a href="{{$item->slug}}" class="dropdown-item" data-key="t-calendar">{{$item->name}}</a>
+                            @endforeach
                         </div>
                     </li>
                     <li class="nav-item dropdown">
